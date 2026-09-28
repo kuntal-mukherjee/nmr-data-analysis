@@ -57,5 +57,61 @@ The program generates `fid_new.dat` in the same directory.
 
 ### Purpose
 
+
+
+---
+
+## 2. Fourier Coefficient Calculation for a C5 Symmetry Sequence
+
+### Overview
+
+This Fortran program calculates complex Fourier coefficients associated with the I+ and I- operators for a C5 symmetry pulse sequence in solid-state NMR.
+
+### Source Code
+
+`c5_fourier_coefficients.f`
+
+### Sequence Parameters
+
+- **Symmetry sequence:** C5
+- **Number of pulse elements:** 10
+- **Fourier index for I+:** n = -2
+- **Fourier index for I-:** n = -2
+
+### Method
+
+The program defines the phases and angular intervals of the ten pulse elements and evaluates the corresponding complex integrals for the I+ and I- operators.
+
+The individual contributions are combined to obtain the final complex Fourier coefficients.
+
+### Output
+
+The program prints:
+
+- The sequence identifier (C5)
+- The Fourier index for each operator
+- The real and imaginary parts of the coefficient associated with I+
+- The real and imaginary parts of the coefficient associated with I-
+
+### Requirements
+
+- A Fortran compiler, such as GNU Fortran (gfortran).
+
+### Compilation
+
+```bash
+gfortran c5_fourier_coefficients.f -o c5_fourier_coefficients
+```
+
+### Execution
+
+```bash
+./c5_fourier_coefficients
+```
+
+### Purpose
+
+This project demonstrates analytical and numerical calculations of Fourier coefficients for symmetry-based pulse sequences in solid-state NMR.
+
 This project demonstrates scientific programming and data processing for solid-state NMR applications.
 
