@@ -90,8 +90,8 @@ The program prints:
 
 - The sequence identifier (C5)
 - The Fourier index for each operator
-- The real and imaginary parts of the coefficient associated with I+
-- The real and imaginary parts of the coefficient associated with I-
+- The real and imaginary parts of the coefficient associated with I^+
+- The real and imaginary parts of the coefficient associated with I^-
 
 ### Requirements
 
@@ -111,7 +111,49 @@ gfortran C5_Fourier.f -o C5_Fourier
 
 ### Purpose
 
-This project demonstrates analytical and numerical calculations of Fourier coefficients for symmetry-based pulse sequences in solid-state NMR.
+This project demonstrates analytical and numerical calculations of Fourier coefficients for symmetry based pulse sequences in solid-state NMR.
 
-This project demonstrates scientific programming and data processing for solid-state NMR applications.
+
+---
+
+## 3. Calculation of Signal Expression via Magnus Expansion of HORROR Experiment
+
+### Overview
+
+This Fortran program calculates complex signal associated with HORROR experiment via time-propagator method using Magnus expansion.
+
+### Source Code
+
+`mCC_HORROR_N1.f`
+
+### Method
+
+The program defines the spin interaction parameters (e.g. CSA, dipolar coupling, isotropic chemical shift etc.) and other relevant parameters with perturbative approach to derive Rabi type of polarization transfer from one carbon to another carbon. 
+The individual contributions are combined to obtain the final complex signal.
+
+### Output
+
+The program prints:
+
+- complex signal of FID
+
+### Requirements
+
+- A Fortran compiler, such as GNU Fortran (gfortran).
+
+### Compilation
+
+```bash
+gfortran mCC_HORROR_N1.f -o mCC_HORROR_N1
+```
+
+### Execution
+
+```bash
+./mCC_HORROR_N1
+```
+
+### Purpose
+
+This project demonstrates analytical calculations of complex signal of HORROR experiment via time-propagator method using Magnus expansion.
 
