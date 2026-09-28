@@ -69,7 +69,7 @@ This Fortran program calculates complex Fourier coefficients associated with the
 
 ### Source Code
 
-`c5_fourier_coefficients.f`
+`C5_Fourier.f`
 
 ### Sequence Parameters
 
@@ -100,13 +100,13 @@ The program prints:
 ### Compilation
 
 ```bash
-gfortran c5_fourier_coefficients.f -o c5_fourier_coefficients
+gfortran C5_Fourier.f -o C5_Fourier
 ```
 
 ### Execution
 
 ```bash
-./c5_fourier_coefficients
+./C5_Fourier
 ```
 
 ### Purpose
